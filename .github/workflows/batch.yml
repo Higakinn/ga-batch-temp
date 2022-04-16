@@ -29,6 +29,6 @@ jobs:
         run: |
           echo "batch start" 
           echo -n ${ENCODED_ENV} | base64 -d > .env
-          docker-compose up -d --build
-          docker-compose exec -T batch python main.py
+          docker-compose run batch python main.py
+          # docker-compose exec -T batch python main.py
           echo "batch end"
