@@ -1,1 +1,2 @@
-.env
+.env.python
+.env.golang
