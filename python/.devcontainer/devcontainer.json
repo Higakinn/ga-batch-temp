@@ -1,0 +1,20 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "python-batch",
+  "workspaceFolder": "/mnt/",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  }
+}

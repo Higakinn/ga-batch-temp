@@ -27,7 +27,7 @@ jobs:
         env:
           ENCODED_GOLANG_ENV: ${{ secrets.ENCODED_GOLANG_ENV }}
         run: |
-          touch .env.python
+          cd golang
           echo -n ${ENCODED_GOLANG_ENV} | base64 -d > .env.golang
           docker-compose run golang-batch ./main
           # docker-compose exec -T batch python main.py

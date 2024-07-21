@@ -1,0 +1,21 @@
+version: '3'
+services:
+  golang-batch-dev:
+    build:
+      context: ./golang
+      target: builder
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./golang/src/:/go/src
+    env_file:
+      - .env.golang
+  golang-batch:
+    build:
+      context: ./golang
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./golang/src/:/go/src
+    env_file:
+      - .env.golang
