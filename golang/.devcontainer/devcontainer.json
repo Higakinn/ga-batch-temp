@@ -1,5 +1,5 @@
 {
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "../compose.yml",
   "service": "golang-batch-dev",
   "workspaceFolder": "/app/",
   "settings": {
